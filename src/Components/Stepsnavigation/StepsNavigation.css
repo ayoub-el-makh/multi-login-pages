@@ -1,0 +1,46 @@
+nav {
+  padding: 1.8rem;
+  background-image: url("../../../public/Images/bg-sidebar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30%;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+nav ul li > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--Light-blue);
+  color: var(--Light-blue);
+  font-weight: 700;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+nav ul li p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+nav ul li p span {
+  color: var(--Cool-gray);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+nav ul li p strong {
+  color: var(--White);
+}
+
+.Active-step {
+  background-color: var(--Light-blue);
+  color: black;
+}

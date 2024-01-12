@@ -1,0 +1,64 @@
+div.personal-info {
+  padding-top: 2.5rem;
+  padding-left: 3rem;
+}
+
+div.personal-info h1 {
+  color: var(--Marine-blue);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+div.personal-info p {
+  color: var(--Cool-gray);
+}
+
+div.personal-info form {
+  margin-top: 2.4rem;
+  color: var(--Marine-blue);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.group-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+div.personal-info form label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.personal-info form label span{
+    color: red;
+    font-size:0.9rem ;
+}
+
+div.personal-info form input{
+    outline: none;
+    padding: 0.8rem;
+    border: 1px solid var(--Light-gray);
+    border-radius:6px ;
+}
+
+div.personal-info form input:focus{
+    border: 1px solid var(--Marine-blue);
+}
+
+div.personal-info div.btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+}
+
+div.personal-info div.btn input{
+    background-color: var(--Marine-blue);
+    color: var(--White);
+    font-weight: 500;
+    padding: 0.9rem 1.5rem;
+    cursor: pointer;
+}

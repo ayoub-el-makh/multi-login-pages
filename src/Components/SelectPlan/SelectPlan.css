@@ -1,0 +1,138 @@
+div.SelectPlan {
+  padding-top: 2.5rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+div.SelectPlan h1 {
+  color: var(--Marine-blue);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+div.SelectPlan p {
+  color: var(--Cool-gray);
+}
+
+div.Plans {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.Plans div.plan {
+  margin-right: 1rem;
+  padding: 1rem 0 0 1rem;
+  height: 10.8rem;
+  width: 9rem;
+  border: 1px solid var(--Light-gray);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+div.Plans div.plan svg {
+  margin-bottom: 3rem;
+}
+
+div.Plans div.plan h4 {
+  color: var(--Marine-blue);
+}
+
+div.Plans div.plan p {
+  font-size: 0.9rem;
+}
+
+.OptionPlan .span {
+  font-weight: 700;
+  color: var(--Cool-gray);
+  font-size: 0.9rem;
+}
+
+div.Plans div.plan small {
+  color: var(--Marine-blue);
+  font-weight: 500;
+}
+
+.subscription-active {
+  color: var(--Marine-blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.type-subscription {
+  border: 1px solid var(--Marine-blue) !important;
+  background-color: var(--Magnolia);
+}
+
+.OptionPlan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.8rem;
+  background-color: var(--Magnolia);
+  padding: 1rem;
+  border-radius: 7px;
+  width: 97%;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle + label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: var(--Marine-blue);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.toggle + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle:checked + label {
+  background-color: var(--Marine-blue);
+}
+
+.toggle:checked + label::before {
+  transform: translateX(20px);
+}
+
+.SelectPlan div.NextBack {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 97%;
+}
+
+.back {
+  background: none;
+  color: var(--Cool-gray);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.next {
+  background-color: var(--Marine-blue);
+  color: var(--White);
+  font-weight: 500;
+  padding: 0.8rem 1.4rem;
+  border-radius: 7px;
+  cursor: pointer;
+}

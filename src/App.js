@@ -4,6 +4,7 @@ import StepsNavigation from "./Components/Stepsnavigation/StepsNavigation";
 import "./App.css";
 import { reducer } from "./Components/reducer";
 import SelectPlan from "./Components/SelectPlan/SelectPlan.jsx";
+import PickAddOns from "./Components/PickAddOns/PickAddOns.jsx";
 const initialValue = {
   info: {
     name: "",
@@ -14,6 +15,7 @@ const initialValue = {
     subscription: "Monthly",
     type: "Arcade",
   },
+  services: [],
   step: 1,
 };
 export const Context = createContext(initialValue);
@@ -32,6 +34,8 @@ function App() {
         <StepsNavigation />
         {data.step === 1 && <Personalinfo />}
         {data.step === 2 && <SelectPlan />}
+        {data.step === 3 && <PickAddOns />}
+        {data.step === 4 && console.log(data)}
       </div>
     </Context.Provider>
   );

@@ -1,0 +1,88 @@
+.Pick-add-ons {
+  padding-top: 2.5rem;
+  padding-left: 3rem;
+  width: 70%;
+}
+div.Pick-add-ons h1 {
+  color: var(--Marine-blue);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+div.Pick-add-ons > p {
+  color: var(--Cool-gray);
+  margin-bottom: 2rem;
+}
+div.Services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+div.Services div.service {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  width: 75%;
+  border: 1px solid var(--Cool-gray);
+  border-radius: 7px;
+  padding: 2.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+}
+div.Services div.service:hover {
+  border: 1px solid var(--Purplish-blue);
+}
+.Service-selected {
+  background-color: var(--Magnolia);
+}
+div.Services div.service > input[type="checkbox"] {
+  margin-right: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+div.Services div.service div.info p:first-child {
+  font-weight: bold;
+  color: var(--Marine-blue);
+  font-size: 1rem;
+}
+div.Services div.service div.info > p {
+  color: var(--Cool-gray);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+div.Services div.service div.info {
+  line-height: 1.3rem;
+}
+div.Services div.service > p {
+  position: absolute;
+  right: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--Purplish-blue);
+}
+.Pick-add-ons div.NextBack {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 75%;
+}
+
+.back {
+  background: none;
+  color: var(--Cool-gray);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.next {
+  background-color: var(--Marine-blue);
+  color: var(--White);
+  font-weight: 500;
+  padding: 0.8rem 1.4rem;
+  border-radius: 7px;
+  cursor: pointer;
+}

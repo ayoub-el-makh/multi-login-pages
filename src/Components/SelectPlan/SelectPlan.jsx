@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { Context } from "../../App";
 import { NEXT_STEP, ADD_SUBSCRIPTION } from "../reducer";
 import "./SelectPlan.css";
@@ -6,6 +6,7 @@ import "./SelectPlan.css";
 export default function SelectPlan() {
   const { data, dispatch } = useContext(Context);
   const [subscription, setSubscription] = useState({ ...data.subscription });
+  const checked = useRef();
   const handleGoBack = () => {
     dispatch({ type: NEXT_STEP, payload: { step: -1 } });
   };
@@ -25,6 +26,11 @@ export default function SelectPlan() {
     dispatch({ type: ADD_SUBSCRIPTION, payload: { subscription } });
     dispatch({ type: NEXT_STEP, payload: { step: 1 } });
   };
+  useEffect(() => {
+    if (data.subscription.subscription !== "Monthly") {
+      checked.current.checked = true;
+    }
+  }, []);
   return (
     <div className="SelectPlan">
       <h1>Select your plan</h1>
@@ -131,6 +137,7 @@ export default function SelectPlan() {
           id="toggle"
           className="toggle"
           onChange={handleChangeSubscription}
+          ref={checked}
         />
         <label htmlFor="toggle"></label>
         <span

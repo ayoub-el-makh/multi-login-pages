@@ -6,6 +6,7 @@ import { reducer } from "./Components/reducer";
 import SelectPlan from "./Components/SelectPlan/SelectPlan.jsx";
 import PickAddOns from "./Components/PickAddOns/PickAddOns.jsx";
 import FinishingUp from "./Components/FinishingUp/FinishingUp.jsx";
+import Thanks from "./Components/Thanks/Thanks";
 const initialValue = {
   info: {
     name: "",
@@ -38,6 +39,7 @@ function App() {
         {data.step === 2 && <SelectPlan />}
         {data.step === 3 && <PickAddOns />}
         {data.step === 4 && <FinishingUp />}
+        {data.step === 5 && <Thanks />}
       </div>
     </Context.Provider>
   );

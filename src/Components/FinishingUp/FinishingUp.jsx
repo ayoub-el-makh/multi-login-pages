@@ -8,7 +8,7 @@ export default function FinishingUp() {
     dispatch({ type: NEXT_STEP, payload: { step: -1 } });
   };
   const handleConfirm = () => {
-    dispatch({ type: NEXT_STEP, payload: { step: -1 } });
+    dispatch({ type: NEXT_STEP, payload: { step: 1 } });
 };
 const handleClick = (e)=>{
     e.preventDefault()

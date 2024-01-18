@@ -28,7 +28,7 @@ export default function StepsNavigation() {
           </p>
         </li>
         <li>
-          <span className={step === 4 ? "Active-step" : ""}>4</span>
+          <span className={step === 4 || step === 5 ? "Active-step" : ""}>4</span>
           <p>
             <span>STEP 4</span>
             <strong>SUMMARY</strong>

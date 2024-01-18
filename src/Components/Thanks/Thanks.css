@@ -1,0 +1,18 @@
+div.Thanks {
+  gap: 1.8rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5rem;
+}
+
+div.Thanks h1 {
+  color: var(--Marine-blue);
+}
+div.Thanks p {
+  text-align: center;
+  color: var(--Cool-gray);
+  line-height: 1.5rem;
+}

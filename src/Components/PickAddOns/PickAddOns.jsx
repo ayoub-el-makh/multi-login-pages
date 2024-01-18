@@ -6,7 +6,7 @@ import { NEXT_STEP, ADD_SERVICES } from "../reducer";
 export default function PickAddOns() {
   const { data, dispatch } = useContext(Context);
   const [services, setServices] = useState([...data.services]);
-  const onlineServer = useRef();
+  const onlineService = useRef();
   const largerStorage = useRef();
   const customazibleProfile = useRef();
   const handelClickBack = () => {
@@ -15,28 +15,28 @@ export default function PickAddOns() {
   const getTypeSubscription = (e) => {
     const type = e.currentTarget.dataset.service;
     switch (type) {
-      case "onlineServer":
-        onlineServer.current.checked = !onlineServer.current.checked;
+      case "Online service":
+        onlineService.current.checked = !onlineService.current.checked;
         updateServices(
-          onlineServer,
-          "onlineServer",
+          onlineService,
+          "Online service",
           data.subscription.subscription === "Monthly" ? 1 : 10
         );
         break;
-      case "largerStorage":
+      case "Larger storage":
         largerStorage.current.checked = !largerStorage.current.checked;
         updateServices(
           largerStorage,
-          "largerStorage",
+          "Larger storage",
           data.subscription.subscription === "Monthly" ? 2 : 20
         );
         break;
-      case "customazibleProfile":
+      case "Customazible profile":
         customazibleProfile.current.checked =
           !customazibleProfile.current.checked;
         updateServices(
           customazibleProfile,
-          "customazibleProfile",
+          "Customazible profile",
           data.subscription.subscription === "Monthly" ? 2 : 20
         );
         break;
@@ -65,14 +65,14 @@ export default function PickAddOns() {
       <div className="Services">
         <div
           className={
-            services.some(({ name }) => name === "onlineServer")
+            services.some(({ name }) => name === "Online service")
               ? "service Service-selected"
               : "service"
           }
-          data-service="onlineServer"
+          data-service="Online service"
           onClick={getTypeSubscription}
         >
-          <input type="checkbox" ref={onlineServer} />
+          <input type="checkbox" defaultChecked={services.some(({name})=> name === "Online service")} ref={onlineService} />
           <div className="info">
             <p>Online service</p>
             <p>Access to multiplayer</p>
@@ -83,14 +83,14 @@ export default function PickAddOns() {
         </div>
         <div
           className={
-            services.some(({ name }) => name === "largerStorage")
+            services.some(({ name }) => name === "Larger storage")
               ? "service Service-selected"
               : "service"
           }
-          data-service="largerStorage"
+          data-service="Larger storage"
           onClick={getTypeSubscription}
         >
-          <input type="checkbox" ref={largerStorage} />
+          <input type="checkbox" defaultChecked={services.some(({name})=> name === "Larger storage")} ref={largerStorage} />
           <div className="info">
             <p>Larger storage</p>
             <p>Extra 1TB of cloud save</p>
@@ -101,14 +101,14 @@ export default function PickAddOns() {
         </div>
         <div
           className={
-            services.some(({ name }) => name === "customazibleProfile")
+            services.some(({ name }) => name === "Customazible profile")
               ? "service Service-selected"
               : "service"
           }
-          data-service="customazibleProfile"
+          data-service="Customazible profile"
           onClick={getTypeSubscription}
         >
-          <input type="checkbox" ref={customazibleProfile} />
+          <input type="checkbox" defaultChecked={services.some(({name})=> name === "Customazible profile")} ref={customazibleProfile} />
           <div className="info">
             <p>Customizable Profile</p>
             <p>Custom theme on your profile</p>

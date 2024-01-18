@@ -5,6 +5,7 @@ import "./App.css";
 import { reducer } from "./Components/reducer";
 import SelectPlan from "./Components/SelectPlan/SelectPlan.jsx";
 import PickAddOns from "./Components/PickAddOns/PickAddOns.jsx";
+import FinishingUp from "./Components/FinishingUp/FinishingUp.jsx";
 const initialValue = {
   info: {
     name: "",
@@ -14,6 +15,7 @@ const initialValue = {
   subscription: {
     subscription: "Monthly",
     type: "Arcade",
+    price : 9
   },
   services: [],
   step: 1,
@@ -35,7 +37,7 @@ function App() {
         {data.step === 1 && <Personalinfo />}
         {data.step === 2 && <SelectPlan />}
         {data.step === 3 && <PickAddOns />}
-        {data.step === 4 && console.log(data)}
+        {data.step === 4 && <FinishingUp />}
       </div>
     </Context.Provider>
   );

@@ -6,6 +6,7 @@ import "./SelectPlan.css";
 export default function SelectPlan() {
   const { data, dispatch } = useContext(Context);
   const [subscription, setSubscription] = useState({ ...data.subscription });
+  const [price, setPrice] = useState(data.subscription.price);
   const checked = useRef();
   const handleGoBack = () => {
     dispatch({ type: NEXT_STEP, payload: { step: -1 } });
@@ -22,15 +23,46 @@ export default function SelectPlan() {
       subscription,
     }));
   };
+
+  const setPrix = () => {
+    let price;
+    if (subscription.type === "Arcade") {
+      if (subscription.subscription === "Yearly") {
+        price = 90;
+      } else {
+        price = 9;
+      }
+    } else if (subscription.type === "Advanced") {
+      if (subscription.subscription === "Yearly") {
+        price = 120;
+      } else {
+        price = 12;
+      }
+    } else if (subscription.type === "Pro") {
+      if (subscription.subscription === "Yearly") {
+        price = 150;
+      } else {
+        price = 15;
+      }
+    }
+    setPrice(price);
+  };
+
   const handelNextStep = () => {
-    dispatch({ type: ADD_SUBSCRIPTION, payload: { subscription } });
+    dispatch({
+      type: ADD_SUBSCRIPTION,
+      payload: { subscription: { ...subscription, price } },
+    });
     dispatch({ type: NEXT_STEP, payload: { step: 1 } });
   };
   useEffect(() => {
-    if (data.subscription.subscription !== "Monthly") {
+    if (subscription.subscription !== "Monthly") {
       checked.current.checked = true;
     }
   }, []);
+  useEffect(() => {
+    setPrix();
+  }, [subscription]);
   return (
     <div className="SelectPlan">
       <h1>Select your plan</h1>

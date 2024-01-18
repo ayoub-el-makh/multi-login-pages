@@ -1,0 +1,122 @@
+div.Finishing-up {
+  padding-top: 2.5rem;
+  padding-left: 3rem;
+  width: 75%;
+  position: relative;
+}
+div.Finishing-up h1 {
+  color: var(--Marine-blue);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+div.Finishing-up > p {
+  color: var(--Cool-gray);
+  margin-bottom: 2rem;
+}
+
+.Plan,
+.Services {
+  padding-left: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.Plan {
+  align-items: center;
+  padding: 1.3rem;
+}
+div.total-content {
+  background-color: var(--Alabaster);
+  position: relative;
+  border-radius: 15px;
+  width: 80%;
+}
+a {
+  color: var(--Purplish-blue);
+}
+
+div.total-content > div:last-child {
+  background-color: white;
+}
+
+hr {
+  width: 91%;
+  left: 5%;
+  height: 1px;
+  position: absolute;
+  border-color: #f0f6ff82;
+}
+
+div.Plan > p {
+  font-weight: bold;
+  color: var(--Marine-blue);
+  font-size: 1rem;
+}
+
+div.Plan div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+div.Plan div p {
+  color: var(--Marine-blue);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+div.Plan div a {
+  font-size: 0.9rem;
+}
+
+div.Finishing-up  div.Services div {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+div.Finishing-up  div.Services div:first-child {
+  margin-top: 1rem;
+}
+
+div.Finishing-up  div.Services > div > p:first-child {
+  color: var(--Cool-gray);
+}
+
+div.Finishing-up  div.Services > div > p:last-child {
+  color: var(--Marine-blue);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+div.total-price {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+div.total-price p{
+    color: var(--Cool-gray);
+    font-weight: 700;
+}
+
+div.total-price strong{
+    color: var(--Purplish-blue);
+}
+
+div.Finishing-up  div.NextBack {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 75%;
+  bottom: 2rem;
+}
+
+div.Finishing-up .next{
+    background-color: var(--Purplish-blue);
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-weight: 700;
+}
